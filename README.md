@@ -1,3 +1,2 @@
-# Machine Learning Pipeline - Flask App Repository
-This repository contains the code for the Flask app for the Machine Learning Pipeline project in https://github.com/bmaelum/ml_pipeline.
-# flask_bootstrap_website
+# Flask / Bootstrap App Repository
+This project is to test UI frameworks like Bootstrap in a Flask app.
