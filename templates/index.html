@@ -6,7 +6,8 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-  <link href="https://fonts.googleapis.com/css?family=DM+Serif+Display:400,400i|Roboto+Mono&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=DM+Serif+Display:400,400i|Roboto+Mono&display=swap"
+    rel="stylesheet">
 
   <link rel="stylesheet" href="static/css/animate.css">
   <link rel="stylesheet" href="static/css/owl.carousel.min.css">
@@ -36,7 +37,7 @@
           aria-controls="navbarsExample05" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
-        
+
       </div>
     </nav>
   </header>
@@ -51,7 +52,8 @@
           <p data-aos="fade-up" data-aos="fade-up" data-aos-delay="">A Kaggle Challenge</p>
           <h1 class="mb-4" data-aos="fade-up" data-aos-delay="100">Titanic API Tester</h1>
           <div data-aos="fade-up" data-aos-delay="100" class="button-box col-lg-12">
-            <a href="https://github.com/makers-in-oslo/titanic-api-tester" class="btn btn-info" role="button" target="_blank">Github</a>
+            <a href="https://github.com/bmaelum/flask_bootstrap_website" class="btn btn-info" role="button"
+              target="_blank">Github</a>
           </div>
 
 
@@ -59,46 +61,46 @@
             <div class="container">
               <form method="POST" action="/">
                 {{ form.hidden_tag() }}
-                
-                <div class="form-group" style="margin-right: 120px;">  
-                  <label>Passenger Class</label>              
+
+                <div class="form-group" style="margin-right: 120px;">
+                  <label>Passenger Class</label>
                   {{ form.pclass(size=20) }}
                 </div>
-                
-                <div class="form-group" style="margin-right: 10px;">   
-                  <label>Sex</label>              
+
+                <div class="form-group" style="margin-right: 10px;">
+                  <label>Sex</label>
                   {{ form.sex(size=20) }}
                 </div>
 
-                <div class="form-group" style="margin-right: 0px;"> 
-                  <label>Age</label>                   
-                   {{ form.age(size=20) }}
+                <div class="form-group" style="margin-right: 0px;">
+                  <label>Age</label>
+                  {{ form.age(size=20) }}
                 </div>
 
-                <div class="form-group" style="margin-right: 250px;">  
+                <div class="form-group" style="margin-right: 250px;">
                   <label>Number of siblings or spouses:</label>
-                   {{ form.sibsp(size=20) }}
+                  {{ form.sibsp(size=20) }}
                 </div>
 
                 <input type="submit" value="Predict">
-            </form>
+              </form>
             </div>
-            </div>
-
-            <h2></h2>
-
-            {% if api_response == 1 %}
-              <h1>Survived.</h1>
-            {% endif %}
-            {% if api_response == 0 %}
-              <h1>You dead.</h1>
-            {% endif %}
-           
-
           </div>
 
+          <h2></h2>
 
-          </div>
+          {% if api_response == 1 %}
+          <h1>Survived.</h1>
+          {% endif %}
+          {% if api_response == 0 %}
+          <h1>You dead.</h1>
+          {% endif %}
+
+
+        </div>
+
+
+      </div>
 
 
     </div>
