@@ -10,27 +10,18 @@
 
 <table>
     <tr>
-        <th>Status</th>
-        <td>
-          {% if api_response|length > 1 %}
-            <p>{{api_status}}</p>
-          {% endif %}
-
-        </td>
-    </tr>
-    <tr>
       <th>Response</th>
       <td>
-        {% if api_response|length > 1 %}
+        {% if api_response %}
           <p>{{api_response}}</p>
         {% endif %}
       </td>
     </tr>
     <tr>
-      <th>Age</th>
+      <th>Data</th>
       <td>
-        {% if api_response|length > 1 %}
-          <p>{{data["Age"]}}</p>
+        {% if api_response%}
+          <p>{{data}}</p>
         {% endif %}
       </td>
     </tr>
@@ -38,7 +29,7 @@
     <tr>
       <th>Prediction</th>
       <td>
-        {% if api_response|length > 1 %}
+        {% if api_response %}
           <p>{{prediction}}</p>
         {% endif %}
       </td>

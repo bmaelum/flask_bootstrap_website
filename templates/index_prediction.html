@@ -57,43 +57,60 @@
 
           <div class="section">
             <div class="container">
-              <form method="POST" action="/">
+                
+              <form method="POST" action="/prediction/">
                 {{ form.hidden_tag() }}
-                
-                <div class="form-group" style="margin-right: 120px;">  
-                  <label>Passenger Class</label>              
-                  {{ form.pclass(size=20) }}
-                </div>
-                
-                <div class="form-group" style="margin-right: 10px;">   
-                  <label>Sex</label>              
-                  {{ form.sex(size=20) }}
-                </div>
-
-                <div class="form-group" style="margin-right: 0px;"> 
+                <div class="form-group"> 
                   <label>Age</label>                   
                    {{ form.age(size=20) }}
                 </div>
 
-                <div class="form-group" style="margin-right: 250px;">  
+                <div class="form-group">  
+                  <label>Passenger Class</label>              
+                  {{ form.pclass(size=20) }}
+                </div>
+
+                <div class="form-group">  
                   <label>Number of siblings or spouses:</label>
                    {{ form.sibsp(size=20) }}
                 </div>
 
+                <div class="form-group">   
+                  <label>Fare</label>              
+                  {{ form.fare(size=20) }}
+                </div>
+
                 <input type="submit" value="Predict">
             </form>
-            </div>
-            </div>
-
-            <h2></h2>
-
-            {% if api_response == 1 %}
-              <h1>Survived.</h1>
-            {% endif %}
-            {% if api_response == 0 %}
-              <h1>You dead.</h1>
-            {% endif %}
-           
+            
+            {% if prediction %}
+              {{prediction}}
+            {% endif%}
+            
+            {% if api_response %}
+            <table>
+              <tr>
+                <th>Response</th>
+                <td>
+                    <p>{{api_response}}</p>
+                </td>
+              </tr>
+              <tr>
+                <th>Data</th>
+                <td>
+                    <p>{{data}}</p>
+                </td>
+              </tr>
+          
+              <tr>
+                <th>Prediction</th>
+                <td>
+                    <p>{{prediction}}</p>
+                </td>
+              </tr>
+          
+          </table>
+          {% endif %}
 
           </div>
 
